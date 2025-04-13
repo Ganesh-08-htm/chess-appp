@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eee; /* Light background for contrast */
+}
+
+#gameContainer {
+    display: flex;
+    align-items: start;
+}
+
+#chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 60px);
+    grid-template-rows: repeat(8, 60px);
+    margin: 20px;
+    border: 4px solid black; /* Black outer border for the entire board */
+    border-radius: 8px; /* Optional: Rounded corners for the board */
+}
+
+.square {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 2em;
+    line-height: 60px; /* Center pieces vertically */
+    position: relative;
+    background-color: #d19a6a; /* Default background for light squares */
+    border: 1px solid black; /* Border for each square */
+}
+
+.square:nth-child(even) {
+    background-color: #8b5a2b; /* Dark brown for dark squares */
+}
+
+.highlight {
+    background-color: rgba(255, 255, 0, 0.5); /* Yellow highlight when selected */
+}
+
+.captured {
+    margin-left: 20px;
+}
+
+.captured div {
+    margin-top: 5px;
+    font-size: 1.5rem;
+}
+.square:hover {
+    background-color:cornsilk ; /* Slightly opaque light black on hover */
+}
